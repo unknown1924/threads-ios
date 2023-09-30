@@ -15,6 +15,7 @@
 		87FF9F252AC8B44200BF716A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F242AC8B44100BF716A /* RegistrationView.swift */; };
 		87FF9F272AC8B86100BF716A /* ThreadsTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F262AC8B86100BF716A /* ThreadsTextFieldModifier.swift */; };
 		87FF9F292AC8B9B200BF716A /* ThreadsButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F282AC8B9B200BF716A /* ThreadsButtonModifier.swift */; };
+		87FF9F2E2AC8BC1600BF716A /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F2D2AC8BC1600BF716A /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		87FF9F242AC8B44100BF716A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		87FF9F262AC8B86100BF716A /* ThreadsTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTextFieldModifier.swift; sourceTree = "<group>"; };
 		87FF9F282AC8B9B200BF716A /* ThreadsButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsButtonModifier.swift; sourceTree = "<group>"; };
+		87FF9F2D2AC8BC1600BF716A /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				87FF9F202AC8A96D00BF716A /* Authentication */,
 				87FF9F1F2AC8A96A00BF716A /* Root */,
+				87FF9F2C2AC8BBD000BF716A /* TabBar */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -149,6 +152,14 @@
 				87FF9F242AC8B44100BF716A /* RegistrationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		87FF9F2C2AC8BBD000BF716A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				87FF9F2D2AC8BC1600BF716A /* TabBarView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +236,7 @@
 				87FF9F232AC8A9A100BF716A /* LoginView.swift in Sources */,
 				87FF9F0D2AC8A7F100BF716A /* ContentView.swift in Sources */,
 				87FF9F272AC8B86100BF716A /* ThreadsTextFieldModifier.swift in Sources */,
+				87FF9F2E2AC8BC1600BF716A /* TabBarView.swift in Sources */,
 				87FF9F0B2AC8A7F100BF716A /* threadsApp.swift in Sources */,
 				87FF9F252AC8B44200BF716A /* RegistrationView.swift in Sources */,
 			);
