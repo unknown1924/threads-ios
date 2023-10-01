@@ -29,12 +29,17 @@ struct RegistrationView: View {
             VStack {
                 TextField("Full Name", text: $viewModel.fullname)
                     .modifier(ThreadsTextFieldModifier())
+                    .autocorrectionDisabled()
                 
                 TextField("Username", text: $viewModel.username)
                     .modifier(ThreadsTextFieldModifier())
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
                 
                 TextField("Email", text: $viewModel.email)
                     .modifier(ThreadsTextFieldModifier())
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
                 
                 SecureField("Password", text: $viewModel.password)
                     .modifier(ThreadsTextFieldModifier())
@@ -42,7 +47,7 @@ struct RegistrationView: View {
             
             // signup button
             Button {
-                Task { try await viewModel.createUser() }
+                Task { try await AuthService.shared.login(with:using:) }
             } label: {
                 Text("Sign Up")
                     .modifier(ThreadsButtonModifier())
