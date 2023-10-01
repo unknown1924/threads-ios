@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8714BB672AC941910089B73A /* CircularProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8714BB662AC941910089B73A /* CircularProfileView.swift */; };
+		8714BB692AC9428B0089B73A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8714BB682AC9428B0089B73A /* UserCell.swift */; };
 		87FF9F0B2AC8A7F100BF716A /* threadsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F0A2AC8A7F100BF716A /* threadsApp.swift */; };
 		87FF9F0D2AC8A7F100BF716A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F0C2AC8A7F100BF716A /* ContentView.swift */; };
 		87FF9F0F2AC8A7F200BF716A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87FF9F0E2AC8A7F200BF716A /* Assets.xcassets */; };
@@ -21,10 +23,12 @@
 		87FF9F3A2AC8C2BE00BF716A /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F392AC8C2BE00BF716A /* CreateThreadView.swift */; };
 		87FF9F3E2AC8C2CD00BF716A /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F3D2AC8C2CD00BF716A /* ActivityView.swift */; };
 		87FF9F422AC8C2DA00BF716A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F412AC8C2DA00BF716A /* ProfileView.swift */; };
-		87FF9F442AC8C55E00BF716A /* ThreadItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F432AC8C55E00BF716A /* ThreadItem.swift */; };
+		87FF9F442AC8C55E00BF716A /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F432AC8C55E00BF716A /* ThreadCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8714BB662AC941910089B73A /* CircularProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileView.swift; sourceTree = "<group>"; };
+		8714BB682AC9428B0089B73A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		87FF9F072AC8A7F100BF716A /* threads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FF9F0A2AC8A7F100BF716A /* threadsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = threadsApp.swift; sourceTree = "<group>"; };
 		87FF9F0C2AC8A7F100BF716A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,7 +44,7 @@
 		87FF9F392AC8C2BE00BF716A /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
 		87FF9F3D2AC8C2CD00BF716A /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		87FF9F412AC8C2DA00BF716A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		87FF9F432AC8C55E00BF716A /* ThreadItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadItem.swift; sourceTree = "<group>"; };
+		87FF9F432AC8C55E00BF716A /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8714BB652AC941560089B73A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8714BB662AC941910089B73A /* CircularProfileView.swift */,
+				8714BB682AC9428B0089B73A /* UserCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		87FF9EFE2AC8A7F100BF716A = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +147,7 @@
 		87FF9F1E2AC8A93500BF716A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8714BB652AC941560089B73A /* Components */,
 				87FF9F3B2AC8C2C200BF716A /* Activity */,
 				87FF9F202AC8A96D00BF716A /* Authentication */,
 				87FF9F372AC8C29600BF716A /* CreateThread */,
@@ -191,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				87FF9F312AC8C21600BF716A /* FeedView.swift */,
-				87FF9F432AC8C55E00BF716A /* ThreadItem.swift */,
+				87FF9F432AC8C55E00BF716A /* ThreadCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,12 +351,14 @@
 				87FF9F422AC8C2DA00BF716A /* ProfileView.swift in Sources */,
 				87FF9F292AC8B9B200BF716A /* ThreadsButtonModifier.swift in Sources */,
 				87FF9F232AC8A9A100BF716A /* LoginView.swift in Sources */,
-				87FF9F442AC8C55E00BF716A /* ThreadItem.swift in Sources */,
+				87FF9F442AC8C55E00BF716A /* ThreadCell.swift in Sources */,
+				8714BB692AC9428B0089B73A /* UserCell.swift in Sources */,
 				87FF9F0D2AC8A7F100BF716A /* ContentView.swift in Sources */,
 				87FF9F272AC8B86100BF716A /* ThreadsTextFieldModifier.swift in Sources */,
 				87FF9F2E2AC8BC1600BF716A /* TabBarView.swift in Sources */,
 				87FF9F0B2AC8A7F100BF716A /* threadsApp.swift in Sources */,
 				87FF9F252AC8B44200BF716A /* RegistrationView.swift in Sources */,
+				8714BB672AC941910089B73A /* CircularProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

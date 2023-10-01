@@ -12,8 +12,8 @@ struct FeedView: View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
                 LazyVStack {
-                    ForEach(1...50, id: \.self) { _ in
-                        ThreadItem()
+                    ForEach(1...10, id: \.self) { _ in
+                        ThreadCell()
                     }
                 }
             }

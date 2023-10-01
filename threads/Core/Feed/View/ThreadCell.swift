@@ -7,17 +7,11 @@
 
 import SwiftUI
 
-struct ThreadItem: View {
+struct ThreadCell: View {
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                Image("cat")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
-                
-                //                Spacer()
+                CircularProfileView()
                 
                 VStack(alignment: .leading, spacing: 2) {
                     HStack {
@@ -76,5 +70,5 @@ struct ThreadItem: View {
 }
 
 #Preview {
-    ThreadItem()
+    ThreadCell()
 }
