@@ -10,6 +10,8 @@ import SwiftUI
 struct TabBarView: View {
     
     @State private var selectedTab = 0
+    @State var showCreateThreadView = false
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             FeedView()
@@ -28,11 +30,16 @@ struct TabBarView: View {
                 .onAppear { selectedTab = 1 }
                 .tag(1)
             
-            CreateThreadView()
+            Text("Create Thread")
+                .font(.largeTitle)
+                .bold()
                 .tabItem {
                     Image(systemName: "plus")
                 }
                 .onAppear { selectedTab = 2 }
+                .onTapGesture {
+                    showCreateThreadView = true
+                }
                 .tag(2)
             
             ActivityView()
@@ -51,6 +58,14 @@ struct TabBarView: View {
                 .onAppear { selectedTab = 4 }
                 .tag(4)
         }
+        .onChange(of: selectedTab) {
+            showCreateThreadView = selectedTab == 2
+        }
+        .sheet(isPresented: $showCreateThreadView, onDismiss: {
+            selectedTab = 0
+        }, content: {
+            CreateThreadView()
+        })
         .tint(.black)
     }
 }
