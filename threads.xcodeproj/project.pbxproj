@@ -16,6 +16,8 @@
 		87D938FE2AC9CC2B000BF524 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 87D938FD2AC9CC2B000BF524 /* FirebaseFirestore */; };
 		87D939002AC9CC2B000BF524 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 87D938FF2AC9CC2B000BF524 /* FirebaseFirestoreSwift */; };
 		87D939022AC9CC2B000BF524 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 87D939012AC9CC2B000BF524 /* FirebaseStorage */; };
+		87D939062AC9DC90000BF524 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D939052AC9DC90000BF524 /* RegistrationViewModel.swift */; };
+		87D939082AC9DD9A000BF524 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D939072AC9DD9A000BF524 /* AuthService.swift */; };
 		87FF9F0B2AC8A7F100BF716A /* threadsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F0A2AC8A7F100BF716A /* threadsApp.swift */; };
 		87FF9F0D2AC8A7F100BF716A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF9F0C2AC8A7F100BF716A /* ContentView.swift */; };
 		87FF9F0F2AC8A7F200BF716A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87FF9F0E2AC8A7F200BF716A /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		8714BB6B2AC98A300089B73A /* ProfileThreadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileThreadFilter.swift; sourceTree = "<group>"; };
 		8714BB6F2AC991960089B73A /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		87D938C12AC9C898000BF524 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		87D939052AC9DC90000BF524 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		87D939072AC9DD9A000BF524 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		87FF9F072AC8A7F100BF716A /* threads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FF9F0A2AC8A7F100BF716A /* threadsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = threadsApp.swift; sourceTree = "<group>"; };
 		87FF9F0C2AC8A7F100BF716A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +114,22 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87D939032AC9DC54000BF524 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				87D939052AC9DC90000BF524 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		87D939042AC9DC57000BF524 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				87D939072AC9DD9A000BF524 /* AuthService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		87FF9EFE2AC8A7F100BF716A = {
@@ -218,6 +238,8 @@
 		87FF9F202AC8A96D00BF716A /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				87D939042AC9DC57000BF524 /* Service */,
+				87D939032AC9DC54000BF524 /* ViewModel */,
 				87FF9F212AC8A98C00BF716A /* Views */,
 			);
 			path = Authentication;
@@ -404,10 +426,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				87FF9F3E2AC8C2CD00BF716A /* ActivityView.swift in Sources */,
+				87D939062AC9DC90000BF524 /* RegistrationViewModel.swift in Sources */,
 				8714BB702AC991960089B73A /* EditProfileView.swift in Sources */,
 				87FF9F3A2AC8C2BE00BF716A /* CreateThreadView.swift in Sources */,
 				87FF9F322AC8C21600BF716A /* FeedView.swift in Sources */,
 				8714BB6C2AC98A300089B73A /* ProfileThreadFilter.swift in Sources */,
+				87D939082AC9DD9A000BF524 /* AuthService.swift in Sources */,
 				87FF9F362AC8C29100BF716A /* ExploreView.swift in Sources */,
 				87FF9F422AC8C2DA00BF716A /* ProfileView.swift in Sources */,
 				87FF9F292AC8B9B200BF716A /* ThreadsButtonModifier.swift in Sources */,
