@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct UserCell: View {
+    let user: User
+
     var body: some View {
         HStack(alignment: .top) {
             CircularProfileView()
             
             VStack(alignment: .leading, spacing: 2) {
-                Text("the_catonator")
+                Text(user.username)
                     .font(.body)
                     .fontWeight(.semibold)
                 
-                Text("Kali Katnip")
+                Text(user.fullname)
                     .font(.subheadline)
                     .multilineTextAlignment(.leading)
             }
-            
+
             Spacer()
-            
+
             Text("Follow")
                 .font(.subheadline)
                 .fontWeight(.semibold)
@@ -32,7 +34,7 @@ struct UserCell: View {
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(Color(.systemGray4))
                 }
-            
+
             //                                Button {
             //                                    // Action
             //                                } label: {
@@ -45,12 +47,13 @@ struct UserCell: View {
             //                                .buttonStyle(.bordered)
             //                                .background(.black)
             //                                .clipShape(.rect(cornerRadius: 10))
-            
+
         }
         .padding(.horizontal)
     }
 }
 
 #Preview {
-    UserCell()
+    // PreviewProvider is not working, check that later
+    UserCell(user: User(id: NSUUID().uuidString, fullname: "Kali Katnip", email: "kat@gmail.com", username: "the_catonator"))
 }
