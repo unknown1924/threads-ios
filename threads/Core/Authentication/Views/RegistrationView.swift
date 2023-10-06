@@ -47,7 +47,7 @@ struct RegistrationView: View {
             
             // signup button
             Button {
-                Task { try await AuthService.shared.login(with:using:) }
+                Task { try await viewModel.createUser() }
             } label: {
                 Text("Sign Up")
                     .modifier(ThreadsButtonModifier())

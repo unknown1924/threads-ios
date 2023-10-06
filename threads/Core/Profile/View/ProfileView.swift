@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct ProfileView: View {
-    
+
+    @StateObject var viewModel = ProfileViewModel()
     @State private var selectedFilter: ProfileThreadFilter = .threads
     @Namespace var animation
-    
+
     private var filterBarWidth: CGFloat {
         let count = CGFloat(ProfileThreadFilter.allCases.count)
         return UIScreen.main.bounds.width / count - 20
         //        return view.window.windowScene.screen.bounds / count - 20
     }
-    
+
     var body: some View {
         NavigationStack {
             
@@ -28,19 +29,21 @@ struct ProfileView: View {
                         VStack(alignment: .leading, spacing: 12) {
                             VStack(alignment: .leading, spacing: 4) {
                                 // Full Name
-                                Text("King Kat")
+                                Text(viewModel.currentUser?.fullname ?? "King Kat")
                                     .font(.title)
                                     .fontWeight(.semibold)
-                                
+
                                 // User Name
-                                Text("the_catonator")
+                                Text(viewModel.currentUser?.username ?? "the_catonator")
                                     .font(.subheadline)
                             }
-                            
-                            // Description
-                            Text("I am the King of the Katniverse")
-                                .font(.footnote)
-                            
+
+                            if let bio = viewModel.currentUser?.bio {
+                                // Description
+                                Text("I am the King of the Katniverse")
+                                    .font(.footnote)
+                            }
+
                             // Followers count
                             Text("8 followers")
                                 .font(.caption)
@@ -107,7 +110,8 @@ struct ProfileView: View {
                     Button {
                         AuthService.shared.signOut()
                     } label: {
-                        Image(systemName: "line.3.horizontal")
+//                        Image(systemName: "line.3.horizontal")
+                        Image(systemName: "power.circle")
                             .tint(.black)
                     }
                 }
