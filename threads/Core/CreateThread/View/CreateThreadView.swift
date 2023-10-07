@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CreateThreadView: View {
-    
+    var user: User?
+
     @State private var caption = ""
     @Environment(\.dismiss) var dismiss
     
@@ -16,7 +17,7 @@ struct CreateThreadView: View {
         NavigationStack {
             VStack {
                 HStack(alignment: .top) {
-                    CircularProfileView()
+                    CircularProfileView(user: nil, size: .small)
                     
                     VStack(alignment: .leading, spacing: 4) {
                         Text("the_catonator")

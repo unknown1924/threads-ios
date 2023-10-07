@@ -11,8 +11,8 @@ struct ThreadCell: View {
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                CircularProfileView()
-                
+                CircularProfileView(user: nil, size: .small)
+
                 VStack(alignment: .leading, spacing: 2) {
                     HStack {
                         Text("the_catonator")
