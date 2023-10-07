@@ -14,7 +14,7 @@ struct EditProfileView: View {
     @State private var link = ""
     @State private var isPrivate = false
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var viewModel: CurrentUserProfileViewModel
+    @StateObject var viewModel = EditProfileViewModel()
 
     var body: some View {
         NavigationStack {
@@ -90,6 +90,7 @@ struct EditProfileView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Done") {
                         // done
+                        Task { try await viewModel.updateUserData(); dismiss() }
                     }
                     .font(.subheadline)
                     .fontWeight(.semibold)

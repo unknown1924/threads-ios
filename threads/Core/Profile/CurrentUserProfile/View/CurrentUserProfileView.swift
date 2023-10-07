@@ -59,7 +59,7 @@ struct CurrentUserProfileView: View {
             }
             .sheet(isPresented: $showEditProfile) {
                 EditProfileView()
-                    .environmentObject(viewModel)
+//                    .environmentObject(viewModel)
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
