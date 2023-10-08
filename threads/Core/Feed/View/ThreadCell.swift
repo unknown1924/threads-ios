@@ -6,22 +6,25 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ThreadCell: View {
+    let thread: Thread
+
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                CircularProfileView(user: nil, size: .small)
+                CircularProfileView(user: thread.user, size: .small)
 
                 VStack(alignment: .leading, spacing: 2) {
                     HStack {
-                        Text("the_catonator")
+                        Text(thread.user?.fullname ?? "")
                             .font(.body)
                             .fontWeight(.semibold)
                         
                         Spacer()
                         
-                        Text("12m")
+                        Text("\(thread.timestamp.nanoseconds)")
                             .font(.caption)
                             .foregroundStyle(.gray)
                         Button {
@@ -33,7 +36,7 @@ struct ThreadCell: View {
                         }
                     }
                     
-                    Text("I am God. Humans worship me.")
+                    Text(thread.caption)
                         .font(.subheadline)
                         .multilineTextAlignment(.leading)
                     
@@ -70,5 +73,5 @@ struct ThreadCell: View {
 }
 
 #Preview {
-    ThreadCell()
+    ThreadCell(thread: Thread(ownerUid: "something", caption: "Helo world", timestamp: Timestamp(seconds: 0, nanoseconds: 0), likes: 0))
 }

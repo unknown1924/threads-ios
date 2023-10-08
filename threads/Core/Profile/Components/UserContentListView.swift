@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct UserContentListView: View {
     @State private var selectedFilter: ProfileThreadFilter = .threads
@@ -14,7 +15,6 @@ struct UserContentListView: View {
     private var filterBarWidth: CGFloat {
         let count = CGFloat(ProfileThreadFilter.allCases.count)
         return UIScreen.main.bounds.width / count - 20
-        //        return view.window.windowScene.screen.bounds / count - 20
     }
 
     var body: some View {
@@ -48,7 +48,7 @@ struct UserContentListView: View {
             
             LazyVStack {
                 ForEach(0...10, id: \.self) { thread in
-                    ThreadCell()
+                    ThreadCell(thread: Thread(ownerUid: "something", caption: "Helo world", timestamp: Timestamp(seconds: 40, nanoseconds: 20), likes: 0))
                 }
             }
         }
